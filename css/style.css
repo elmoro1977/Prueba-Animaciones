@@ -37,7 +37,9 @@ html {
 
 .header {
     grid-area: header;
-    background-color:  #db2763a3;
+    /* background-color:  #db2763a3; */
+    /* gradiente linearl */
+    background-image: linear-gradient(to right,#d1a203,#bbd103, #92ff00);
 }
 
 
@@ -51,7 +53,12 @@ html {
 .footer {
     grid-area: footer;
     background-color:  #7d70bab3;
-    ;
+
+}
+
+.footer:hover {
+    background-color: #92ff00;
+    transition: .3s;
 }
 
 .grid-container-header {
@@ -84,6 +91,44 @@ html {
     display: flex;
     justify-content: center;
     grid-area: logo;
+}
+
+.logo-animacion{
+    width: 150px;
+    height: 63px;
+    animation: girando;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+@keyframes girando{
+    0%{
+        transform: rotateY(0deg);
+    }
+    12.5%{
+        transform: rotateY(45deg);
+    } 
+    25% {
+        transform: rotateY(90deg);
+    }
+    37.5%{
+        transform: rotateY(135deg);
+    }
+    50%{
+        transform: rotateY(180deg);
+    }
+    62.5%{
+        transform: rotateY(225deg);
+    }
+    75%{
+        transform: rotateY(270deg);
+    }
+    87.5%{
+        transform: rotateY(315deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
 }
 
 .logo img {
@@ -130,12 +175,19 @@ html {
     display: flex;
     flex-direction: column;
     grid-area: sectionOne;
-    background-image: url(https://sublishop.com.ar/wp-content/uploads/2019/11/fondo_header3-4.jpg);
+    /* background-image: url(https://sublishop.com.ar/wp-content/uploads/2019/11/fondo_header3-4.jpg); */
+    /* grdiente lineal */
+    background-image: linear-gradient(45deg, rgb(128, 0, 100), rgb(0, 153, 255), rgb(255, 196, 0));
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-top: 15px;
     margin-bottom: 15px;
+    transform: skew(-2deg, 2deg);
+}
+
+.sectionOne:hover{
+    background-image: linear-gradient(45deg, rgb(255, 196, 0), rgb(0, 153, 255),rgb(128, 0, 100) ) ;
 }
 
 .sectionOne h1 {
@@ -161,17 +213,30 @@ html {
 
 }
 
+.vasoPer {
+    transition: 3s;
+}
+
+.vasoPer:hover {
+    transform: translateX(250px) rotate(180deg) scale(-1.0);
+}
+
 .sectionTwo {
     display: flex;
     flex-direction: column;
     grid-area: sectionTwo;
-    background-image: url(https://sublishop.com.ar/wp-content/uploads/2019/11/fondo_header3-4.jpg);
+    /* background-image: url(https://sublishop.com.ar/wp-content/uploads/2019/11/fondo_header3-4.jpg); */
+    /* gradiente lienal */
+    background-image: linear-gradient(45deg, white, rgb(0, 0, 0) 75%);
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-top: 7px;
     margin-bottom: 15px;
+    transform: skew(2deg, -2deg);
 }
+
+
 
 .sectionTwo img {
     width: 200px;
@@ -194,6 +259,15 @@ html {
     padding-right: 20px;
     padding-left: 20px;
 }
+
+.llaveroPer {
+    transition: 3s;
+}
+
+.llaveroPer:hover {
+    transform: translateX(-250px) rotate(180deg) scale(-1.0);
+}
+
 
 .grid-container-footer {
     display: grid;
